@@ -23,22 +23,47 @@ function App() {
     ).length;
     const totalTodos = todos.length;
 
-    const searchedTodos = todos.filter(
-      (todo) => {
-        const todoText = todo.text.toLowerCase();
-        const searchText = searchValue.toLowerCase();
-        return todoText.includes(searchText);
-      }
+  const searchedTodos = todos.filter(
+    (todo) => {
+      const todoText = todo.text.toLowerCase();
+      const searchText = searchValue.toLowerCase();
+      return todoText.includes(searchText);
+    }
+  );
+    // console.log("Text: " + searchValue);
+    
+  const completeTodo = (text) =>{
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text == text
     );
-  console.log("Text: " + searchValue);
+    newTodos[todoIndex].completed = true;
+    setTodos(newTodos)
+  }
 
+  const deleteTodo = (text) =>{
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text == text
+    );
+    newTodos.splice(todoIndex,1);
+    setTodos(newTodos)
+  }
+  const resultado = (completedTodos, totalTodos) =>
+    // completedTodos == 0 || 
+    completedTodos === totalTodos ?
+    "FELICITACIONES HAZ COMPLETADOS TODOS LOS TODOS" :
+   `Has completado ${completedTodos} de ${totalTodos} ToDos`;
+    ; 
+  // console.log(completedTodos+" - "+ totalTodos);
   
   return (
     <>
       <TodoCounter 
-        completed={completedTodos}
-        total={totalTodos}
-       />
+        // completed={completedTodos}
+        // total={totalTodos}
+        elResultado = {resultado(completedTodos, totalTodos)}
+      />
       <TodoSearch 
         searchValue={searchValue}
         setSearchValue={setSearchValue}
@@ -50,7 +75,9 @@ function App() {
             key={todo.text}
             text={todo.text}
             completed={todo.completed}
-          />
+            onComplete ={() => completeTodo(todo.text)}
+            onDelete ={() => deleteTodo(todo.text)}
+            />
         ))}
       </TodoList>
       

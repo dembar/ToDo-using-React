@@ -1,10 +1,12 @@
 import './TodoCounter.css';
 
-function TodoCounter({ total, completed }){
+function TodoCounter(props){
     return (
-        <h1 className="TodoCounter">
-            Has completado {completed} de {total} ToDos
-        </h1>
+        <>
+            <h1 className="TodoCounter">
+                {props.elResultado}
+            </h1>
+        </>
     );
   }
 
