@@ -4,7 +4,7 @@ import React from 'react';
 function EmptyTodos(){
 
   return (
-      <p>Cargando.EmptyTodos</p>
+      <p>No hay ToDos con el parametro buscado</p>
     );
   }
 
