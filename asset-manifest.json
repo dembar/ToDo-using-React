@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/https;//dembar.github.io/ToDo-using-React/static/css/main.03450933.css",
+    "main.js": "/https;//dembar.github.io/ToDo-using-React/static/js/main.9ab4c74c.js",
+    "index.html": "/https;//dembar.github.io/ToDo-using-React/index.html",
+    "static/media/delete.svg": "/https;//dembar.github.io/ToDo-using-React/static/media/delete.eab2ec9697f957abfc37a2747016322c.svg",
+    "static/media/check.svg": "/https;//dembar.github.io/ToDo-using-React/static/media/check.657a7150fa9c0b23e7bb955ebfb2e61e.svg",
+    "main.03450933.css.map": "/https;//dembar.github.io/ToDo-using-React/static/css/main.03450933.css.map",
+    "main.9ab4c74c.js.map": "/https;//dembar.github.io/ToDo-using-React/static/js/main.9ab4c74c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03450933.css",
+    "static/js/main.9ab4c74c.js"
+  ]
+}
