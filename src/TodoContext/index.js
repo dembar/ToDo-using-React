@@ -12,8 +12,7 @@ function TodoProvider({children}){
       } =  useLocalStorage('TODOS_V1', []);
       const [searchValue, setSearchValue] = React.useState('');
 
-      const [openModal, setOpenModal] = React.useState(true);
-
+      const [openModal, setOpenModal] = React.useState(false);
 
       const completedTodos = todos.filter(
           todo => !!todo.completed
@@ -46,6 +45,15 @@ function TodoProvider({children}){
         saveTodos(newTodos)
       }
     
+      const addTodo = (text) =>{
+        const newTodos = [...todos];
+        newTodos.push({
+          text,
+          completed:false,
+        });
+        saveTodos(newTodos);
+      }
+
       const resultado = (completedTodos, totalTodos) =>
         completedTodos === totalTodos ?
         "FELICITACIONES HAZ COMPLETADOS TODOS LOS TODOS" :
@@ -66,6 +74,7 @@ function TodoProvider({children}){
             deleteTodo,
             openModal,
             setOpenModal,
+            addTodo,
         }}>
             {children}
         </TodoContext.Provider>        

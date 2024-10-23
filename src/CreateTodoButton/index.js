@@ -8,9 +8,10 @@ function CreateTodoButton(){
       <button 
         className="CreateTodoButton"
         onClick={
-          (event) => {
+          // (event) => {
+            () => {
             console.log('Click')
-            setOpenModal(prevState => !prevState);
+            setOpenModal(prevState => !prevState); // Con la arrow function recibo el estado previo y devuelvo la negacion del mismo estado.
           }
         }>+</button>
     );
