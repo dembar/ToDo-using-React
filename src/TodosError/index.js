@@ -4,7 +4,7 @@ import React from 'react';
 function TodosError(){
 
   return (
-      <p>Cargando..TodosError.</p>
+      <p>Cargando...TodosError</p>
     );
   }
 

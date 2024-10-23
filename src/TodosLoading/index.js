@@ -5,9 +5,11 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 function TodosLoading(){
     return (
+      <>
         <Box className='circularProgress' sx={{ display: 'flex' }}>
-        <CircularProgress />
-      </Box>
+          <CircularProgress />
+        </Box>
+      </>
     );
   }
 

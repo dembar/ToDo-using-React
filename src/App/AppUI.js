@@ -22,13 +22,14 @@ function AppUI(){
   } = React.useContext(TodoContext);
     return (
     <>
-      <TodoCounter />
-      <TodoSearch />
+      {/* <TodoCounter />
+      <TodoSearch /> */}
+      {loading && <TodosLoading />}
+      {error && <TodosError />}
+      {!loading && <TodoCounter />}
+      {!loading && <TodoSearch />}
       <TodoList>
-        {loading && <TodosLoading />}
-        {error && <TodosError />}
         {(!loading && searchedTodos.length === 0) && <EmptyTodos />}
-
         {searchedTodos.map(todo => (
           <TodoItem
             key={todo.text}

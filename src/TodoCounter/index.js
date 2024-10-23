@@ -10,7 +10,7 @@ function TodoCounter(){
     } = React.useContext(TodoContext);
     return (
         <h1 className="TodoCounter">
-            {resultado(completedTodos, totalTodos)}
+           {resultado(completedTodos, totalTodos)}
         </h1>
     );
   }
