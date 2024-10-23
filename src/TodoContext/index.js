@@ -58,7 +58,7 @@ function TodoProvider({children}){
 
     const resultado = (completedTodos, totalTodos) =>
       completedTodos === totalTodos ?
-      "FELICITACIONES HAZ COMPLETADOS TODOS LOS TODOS" :
+      "FELICITACIONES HAZ COMPLETADO TODOS LOS TODOS" :
       `Has completado ${completedTodos} de ${totalTodos} ToDos`;
     
       
